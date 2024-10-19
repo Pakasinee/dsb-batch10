@@ -4,7 +4,7 @@ My data science and analytics projects
 
 ## My Projects
 1. SQL supermarket analysis
-2. SQL Chat-bot Order
+2. R Programming - Chat-bot Order
 3. R Programming - Pao Ying Chub
 4. Looker GA4 Dashboard
 5. Linear Regression Model using Caret
