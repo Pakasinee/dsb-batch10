@@ -1,0 +1,49 @@
+## Pao_Ying_Chub_Game
+
+# import random function
+from random import choice
+
+# Game Function
+def pao_ying_chub():
+    hands = ["hammer", "scissor", "paper"]
+    username = input("what is your name? ")
+    end = int(input("How many times do you want to play? "))
+    print("Game Start! " + username)
+
+    user_score = 0
+    computer_score = 0
+    count = 1
+    while count <= end:
+
+        print(f"Round {count}")
+
+        user = input("Choose your hand (hammer, paper, scissor): ")
+        computer = choice(hands)
+        print(f"computer choose {computer}")
+
+        if user == "hammer" and computer == "scissor":
+            user_score += 1
+            print(f"You win! your score is {user_score}")
+        elif user == "scissor" and computer == "paper":
+            user_score += 1
+            print(f"You win! your score is {user_score}")
+        elif user == "paper" and computer == "hammer":
+            user_score += 1
+            print(f"You win! your score is {user_score}")
+        elif user == computer:
+            print("Draw!")
+        else:
+            computer_score += 1
+            print(f"Computer win! your score is {user_score}")
+
+        count += 1
+
+    print("End Game!")
+    print(f"{username} score is {user_score}")
+    print(f"Computer score is {computer_score}")
+    if user_score > computer_score:
+        print(f"Congrats {username} Win!")
+    elif user_score == computer_score:
+        print("Draw!")
+    else:
+        print("Computer Win!")
