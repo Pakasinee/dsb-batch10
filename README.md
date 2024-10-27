@@ -7,8 +7,9 @@ My data science and analytics projects
 2. R Programming - Chat-bot Order
 3. R Programming - Pao Ying Chub
 4. Looker GA4 Dashboard
-5. Linear Regression Model using Caret
-6. Python Programming - Pao Ying Chub
+5. Python Programming - Pao Ying Chub
+6. Python Programming - OOP create ATM
+7. Python Programming - Request Public API
 
 
 
