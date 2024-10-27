@@ -1,0 +1,56 @@
+## 1.OPP create ATM
+## 4-5 methods
+
+
+class ATM():
+    def __init__(self,account_id, name, bank, balance, sms_tel):
+        self.account_id = account_id
+        self.name = name
+        self.bank = bank
+        self.balance = balance
+        self.sms_tel = sms_tel
+
+
+    # methods
+    def deposit(self, amount):
+        self.balance += amount
+        print("Deposit successful, Thank you.")
+
+
+    def withdraw(self, amount):
+        if self.balance >= amount:
+            self.balance -= amount
+            print("Withdraw successful, Thank you.")
+        else:
+            print("Please check your balance again, Thank you.")
+
+
+    def transfer(self, amount, recipient_account):
+        if self.balance >= amount:
+            self.balance -= amount
+            print("Transfer successful, Thank you.")
+
+        else:
+            print("Please check your balance again, Thank you.")
+
+
+    def check_balance(self):
+        print(f"Your current balance is {self.balance}")
+
+
+    def sms_alert(self, tel):
+        if self.sms_tel == "NA":
+            self.sms_tel = tel
+            print("Apply SMS notification successful, Thank you.")
+        else:
+            print(f"You have already apply SMS notification with Tel {self.sms_tel}.")
+
+
+    def __str__(self):
+        return f"Account ID: {self.account_id}, Name: {self.name}, Bank: {self.bank}, Balance: {self.balance}, SMS Tel: {self.sms_tel}"
+
+
+## Mod Data
+user1 = ATM("12345", "john", "Kbank", 1000, "NA")
+user2 = ATM("12346", "mary", "Kbank", 500, "0811111111")
+user3 = ATM("12341", "jena", "SCB", 3500, "0933333333")
